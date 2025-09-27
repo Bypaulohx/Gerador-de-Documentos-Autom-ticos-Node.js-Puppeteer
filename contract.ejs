@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8"/>
+  <title>Contrato - <%= contractNumber %></title>
+  <style>
+    body { font-family: Arial, Helvetica, sans-serif; font-size: 12px; color: #222; }
+    .container { padding: 20mm; }
+    .header { text-align:center; margin-bottom: 10mm; }
+    h1 { margin:0; font-size: 18px }
+    .section { margin-bottom: 8mm }
+    footer { position: fixed; bottom: 10mm; left: 0; right: 0; text-align:center; font-size:10px; color:#666 }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>CONTRATO DE PRESTAÇÃO DE SERVIÇOS</h1>
+      <div><%= companyName %></div>
+    </div>
+
+    <div class="section">
+      <strong>Contratante:</strong> <%= clientName %> (<%= clientCpf %>)<br/>
+      <strong>Contrato Nº:</strong> <%= contractNumber %><br/>
+      <strong>Data:</strong> <%= contractDate %>
+    </div>
+
+    <div class="section">
+      <%= bodyHtml %>
+    </div>
+
+    <div class="section">
+      <p>Assinaturas:</p>
+      <p>___________________________</p>
+      <p><%= companyName %></p>
+
+      <p>___________________________</p>
+      <p><%= clientName %></p>
+    </div>
+  </div>
+  <footer>Gerado em <%= new Date().toLocaleString() %></footer>
+</body>
+</html>
