@@ -22,7 +22,7 @@ O fluxo é simples:
 3. O **Puppeteer** renderiza o HTML e exporta em PDF.  
 4. O PDF é retornado via **download** ou salvo em disco.
 
-```mermaid
+```
 flowchart LR
   A[Usuário / CLI / API] --> B[Template Renderer (EJS)]
   B --> C[PDF Generator (Puppeteer)]
